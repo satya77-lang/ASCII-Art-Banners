@@ -126,7 +126,93 @@ EOF
 
 ---
 
-## 💡 Pro Tips
+## �️ ASCII Art Pictures (Images in Terminal)
+
+> Text banners are cool, but what about actual **pictures** — like the Linux Tux penguin — rendered in ASCII style? Here's how:
+
+### 🐧 Pre-Made ASCII Art (Copy & Paste)
+
+Tons of classic art already exists — just grab and use:
+
+```
+         .--.
+        |o_o |
+        |:_/ |
+       //   \ \
+      (|     | )
+     /'\_   _/`\
+     \___)=(___/
+```
+
+| Source | What You Get |
+|--------|-------------|
+| [**ascii.co.uk/art**](https://ascii.co.uk/art) | Huge curated collection of pre-made ASCII art |
+| [**asciiart.eu**](https://www.asciiart.eu/) | Categorized art — animals, logos, objects, etc. |
+| [**chris.com/ascii**](https://chris.com/ascii/) | Classic ASCII art archive |
+
+---
+
+### 🔄 Convert Any Image to ASCII Art
+
+Want to turn **your own images** into ASCII art? These tools do that:
+
+#### `jp2a` — *Image to ASCII converter*
+
+```bash
+# Install
+sudo apt install jp2a
+
+# Convert an image to ASCII
+jp2a tux.png
+
+# Set width for terminal
+jp2a --width=40 tux.png
+
+# Use custom characters for shading
+jp2a --chars=" .:-=+*#%@" tux.png
+```
+
+#### `ascii-image-converter` — *Modern & Feature-Rich* ⚡
+
+```bash
+# Install (via Go or download binary)
+# See: https://github.com/TheZoraworkar/ascii-image-converter
+
+# Convert with color support!
+ascii-image-converter tux.png
+
+# Set dimensions
+ascii-image-converter -d 40,20 tux.png
+
+# Braille characters for higher detail
+ascii-image-converter -b tux.png
+```
+
+> [!TIP]
+> `ascii-image-converter` supports **colored ASCII output** in the terminal — so you can get a full-color Tux penguin made of text characters! 🎨
+
+---
+
+### 🧰 Other Fun Tools
+
+| Tool | What It Does | Install |
+|------|-------------|---------|
+| **`neofetch`** | Shows system info with a beautiful ASCII logo of your distro | `sudo apt install neofetch` |
+| **`fastfetch`** | Faster alternative to neofetch with ASCII logos | `sudo apt install fastfetch` |
+| **`cowsay`** | ASCII animals with speech bubbles | `sudo apt install cowsay` |
+| **`lolcat`** | Adds rainbow gradient to any terminal output | `sudo apt install lolcat` |
+
+**Examples:**
+```bash
+neofetch                    # shows your distro's ASCII logo + system info
+cowsay "I love Linux!"      # cow says your message
+cowsay -f tux "Hello!"      # TUX says your message! 🐧
+fortune | cowsay | lolcat   # random quote + cow + rainbow 🌈
+```
+
+---
+
+## �💡 Pro Tips
 
 - 🎯 **Pick readable fonts** — `slant`, `banner`, `big`, and `standard` are great defaults
 - 🎨 **Combine `toilet` with `lolcat`** for rainbow gradient output:
